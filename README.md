@@ -9,3 +9,32 @@
 
 
 # meme-research
+
+## Huggingface
+
+1. A Huggingfacen tárolt dolgok eléréséhez töltsd le a `huggingface_hub` csomagot:
+
+```bash
+pip install huggingface_hub
+```
+
+2. Majd jelentkezz be a `huggingface-cli` segítségével:
+
+```bash
+huggingface-cli login
+```
+
+### Adatok letöltése HuggingFace-ről:
+    
+```python
+from datasets import load_dataset
+dataset = load_dataset("HSDSLab/FacebookMemes")
+```
+
+### Modell letöltése HuggingFace-ről:
+
+```python
+loaded_model = ImagenetTransferLearning.from_pretrained('HSDSLab/MemeTemplateClassifier')
+```
+
+    
