@@ -1,0 +1,5 @@
+A parquet fájlok tartalmazzák az egyes platformokhoz tartozó képekhez tartozó metaadatokat. A redditeset fel kellett darabolni három részre, hogy fel lehessen pusholni GitHubra, mert egyben túl nagy volt. A predictions mappa tartalmazza az egyes modellek által tett predickiókat az összes SM képre + van egy külön df amiben csak az 1000 manuális kiértékelt képhez tartozó predek vannak.
+
+Végül csak a CNN-el és az RNN+phashel lett leinferálva az összes SM kép. Ennek oka hogy a cikk alapján is ezeket a modelleket találtuk úgy hogy a legérdemesebb velük tovább haladni. A CNN bináris részénel azt a thresholdod használtuk ami az Imgflipen keresztvalidálva a legjobb metrikákat nyújtotta. Ennek konkrét értéke a fájl nevében is szerepel. Ha ettől szigorúbb predikciókat szeretnél, akkor a cnn-es mappában lévő inferáló notebookban vedd feljebb a `best_threshold` értékét. 
+
+Amennyiben még nincs benne a predictions mappában ennek 2 modellnek a predikciós fájlja az azért van mert még mindig a "CPU-s szerveren" futnak.
